@@ -8,41 +8,37 @@ mat-card {
   margin: 20px auto;
 }
 
-button {
-  margin-top: 16px;
-}
-
 mat-checkbox {
   margin: 16px 0;
 }
 
-table {
-  width: 100%;
-}
-
-// Make table card wider
-mat-card:last-child {
-  max-width: 800px;
-}
-
-// Filter field styling
-.filter-field {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-// Actions column styling
-.mat-column-actions {
-  width: 80px;
-  text-align: center;
-}
-
-// Dialog content styling
-.user-details {
-  min-width: 300px;
+.form-actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
   
-  p {
-    margin: 8px 0;
-    line-height: 1.5;
+  button {
+    margin: 0;
+    
+    mat-icon {
+      margin-right: 8px;
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 600px) {
+  mat-card {
+    margin: 10px;
+    max-width: none;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+    
+    button {
+      width: 100%;
+    }
   }
 }
