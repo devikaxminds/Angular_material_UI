@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+// Define a theme
+$primary: mat.m2-define-palette(mat.$m2-indigo-palette);
+$accent: mat.m2-define-palette(mat.$m2-pink-palette, A200, A100, A400);
+$warn: mat.m2-define-palette(mat.$m2-red-palette);
+
+$theme: mat.m2-define-light-theme((
+  color: (
+    primary: $primary,
+    accent: $accent,
+    warn: $warn,
+  ),
+  typography: mat.m2-define-typography-config(),
+  density: 0,
+));
+
+@include mat.all-component-themes($theme);
+
+/* Global styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.form-field {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}

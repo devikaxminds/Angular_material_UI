@@ -1,0 +1,48 @@
+mat-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+mat-card {
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+button {
+  margin-top: 16px;
+}
+
+mat-checkbox {
+  margin: 16px 0;
+}
+
+table {
+  width: 100%;
+}
+
+// Make table card wider
+mat-card:last-child {
+  max-width: 800px;
+}
+
+// Filter field styling
+.filter-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+// Actions column styling
+.mat-column-actions {
+  width: 80px;
+  text-align: center;
+}
+
+// Dialog content styling
+.user-details {
+  min-width: 300px;
+  
+  p {
+    margin: 8px 0;
+    line-height: 1.5;
+  }
+}
